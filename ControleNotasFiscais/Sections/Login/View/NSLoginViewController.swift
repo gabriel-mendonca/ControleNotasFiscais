@@ -73,12 +73,25 @@ class NSLoginViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Esqueci minha senha", for: .normal)
         button.backgroundColor = .clear
+        button.addTarget(self, action: #selector(sendToForgetPassword), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var buttonEnter: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Entrar", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.tintColor = .black
+        button.backgroundColor = .white
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 5
         return button
     }()
     
     lazy var buttonCadastrar: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Cadastrar", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
         button.tintColor = .black
         button.backgroundColor = .white
         button.clipsToBounds = true
@@ -97,16 +110,21 @@ class NSLoginViewController: UIViewController {
         return button
     }()
     
-    lazy var buttonApple: UIButton = {
+    lazy var buttonFacebook: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Login com Apple", for: .normal)
+        button.setTitle("Login com Facebook", for: .normal)
         button.tintColor = .black
         button.backgroundColor = .white
         button.clipsToBounds = true
         button.layer.cornerRadius = 5
         return button
     }()
+    
+    @objc
+    private func sendToForgetPassword() {
+        viewModel.goForgetPassword()
+    }
     
     private func constraintsTitlePage() {
         titlePage.anchor(top: view.topAnchor,
@@ -156,24 +174,14 @@ class NSLoginViewController: UIViewController {
                                     heightConstant: 16)
     }
     
-    private func constraintsButtonGoogle() {
-        buttonGoogle.anchor(top: textFieldPassword.bottomAnchor,
-                            left: view.leftAnchor,
-                            right: view.rightAnchor,
-                            topConstant: 12,
-                            leftConstant: 16,
-                            rightConstant: 16,
-                            heightConstant: 12)
-    }
-    
-    private func constraintsButtonApple() {
-        buttonGoogle.anchor(top: buttonGoogle.bottomAnchor,
-                            left: view.leftAnchor,
-                            right: view.rightAnchor,
-                            topConstant: 12,
-                            leftConstant: 16,
-                            rightConstant: 16,
-                            heightConstant: 12)
+    private func constraintsButtonEnter() {
+        buttonEnter.anchor(top: textFieldPassword.bottomAnchor,
+                           left: view.leftAnchor,
+                           right: view.rightAnchor,
+                           topConstant: 50,
+                           leftConstant: 24,
+                           rightConstant: 24,
+                           heightConstant: 50)
     }
 }
 
@@ -183,11 +191,12 @@ extension NSLoginViewController: ViewLayoutHelper {
         view.addSubview(textFieldEmail)
         view.addSubview(textFieldPassword)
         view.addSubview(buttonForgetPassword)
+        view.addSubview(buttonEnter)
         view.addSubview(stackButtonsLogin)
         
         stackButtonsLogin.addArrangedSubview(buttonCadastrar)
         stackButtonsLogin.addArrangedSubview(buttonGoogle)
-        stackButtonsLogin.addArrangedSubview(buttonApple)
+        stackButtonsLogin.addArrangedSubview(buttonFacebook)
     }
     
     func setupContraints() {
@@ -196,6 +205,7 @@ extension NSLoginViewController: ViewLayoutHelper {
         constraintsTextFieldPassword()
         constraintsButtonForgetPassword()
         constraintStackFieldButtonsLogin()
+        constraintsButtonEnter()
     }
     
     func setupAdditionalConfiguration() {

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>27800782176-g4tnc01p3gnpgdq7tpq6pe5to75s2ns4.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.27800782176-g4tnc01p3gnpgdq7tpq6pe5to75s2ns4</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDyy5e5jLiinea0SyHRHpasN_9bBU_f3Jg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>27800782176</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.gabriel-mendonca.ControleNotasFiscais</string>
+	<key>PROJECT_ID</key>
+	<string>controlenotasfiscais-9a546</string>
+	<key>STORAGE_BUCKET</key>
+	<string>controlenotasfiscais-9a546.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:27800782176:ios:989fee17f1147241e64a05</string>
+</dict>
+</plist>

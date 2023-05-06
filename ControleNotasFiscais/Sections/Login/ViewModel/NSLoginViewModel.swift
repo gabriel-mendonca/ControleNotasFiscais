@@ -7,7 +7,16 @@
 
 import Foundation
 
+protocol NSLoginViewModelCoordinatorDelegate: AnyObject {
+    func goToForgetPassword()
+}
+
 
 class NSLoginViewModel {
     
+    weak var delegate: NSLoginViewModelCoordinatorDelegate?
+    
+    func goForgetPassword() {
+        delegate?.goToForgetPassword()
+    }
 }

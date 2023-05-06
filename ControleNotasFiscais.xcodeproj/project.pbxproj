@@ -20,7 +20,10 @@
 		DAA719032A05D72C00265D8C /* NSLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA719022A05D72C00265D8C /* NSLoginViewModel.swift */; };
 		DAA719072A05D7C400265D8C /* ViewLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA719062A05D7C400265D8C /* ViewLayoutHelper.swift */; };
 		DAA719092A05D7F300265D8C /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA719082A05D7F300265D8C /* UIView+AutoLayout.swift */; };
-		DAA7190B2A05F40900265D8C /* TextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7190A2A05F40900265D8C /* TextField+Extension.swift */; };
+		DAA7190B2A05F40900265D8C /* NSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7190A2A05F40900265D8C /* NSTextField.swift */; };
+		DAA719122A06C61F00265D8C /* NSForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA719112A06C61E00265D8C /* NSForgetPasswordViewController.swift */; };
+		DAA719152A06C65E00265D8C /* NSForgetPasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA719142A06C65E00265D8C /* NSForgetPasswordCoordinator.swift */; };
+		DAA719172A06C6B900265D8C /* NSForgetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA719162A06C6B900265D8C /* NSForgetPasswordViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +63,10 @@
 		DAA719022A05D72C00265D8C /* NSLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLoginViewModel.swift; sourceTree = "<group>"; };
 		DAA719062A05D7C400265D8C /* ViewLayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLayoutHelper.swift; sourceTree = "<group>"; };
 		DAA719082A05D7F300265D8C /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
-		DAA7190A2A05F40900265D8C /* TextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
+		DAA7190A2A05F40900265D8C /* NSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTextField.swift; sourceTree = "<group>"; };
+		DAA719112A06C61E00265D8C /* NSForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		DAA719142A06C65E00265D8C /* NSForgetPasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSForgetPasswordCoordinator.swift; sourceTree = "<group>"; };
+		DAA719162A06C6B900265D8C /* NSForgetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSForgetPasswordViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +159,7 @@
 		DAA718F82A0334A700265D8C /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				DAA7190C2A06C5E400265D8C /* ForgetPassword */,
 				DAA718F92A0334B000265D8C /* Login */,
 			);
 			path = Sections;
@@ -203,8 +210,8 @@
 		DAA719042A05D79000265D8C /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				DAA719132A06C64200265D8C /* Components */,
 				DAA719052A05D79C00265D8C /* ViewLayout */,
-				DAA7190A2A05F40900265D8C /* TextField+Extension.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -216,6 +223,56 @@
 				DAA719082A05D7F300265D8C /* UIView+AutoLayout.swift */,
 			);
 			path = ViewLayout;
+			sourceTree = "<group>";
+		};
+		DAA7190C2A06C5E400265D8C /* ForgetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				DAA719102A06C60700265D8C /* Coordinator */,
+				DAA7190F2A06C5FE00265D8C /* Model */,
+				DAA7190E2A06C5F700265D8C /* ViewModel */,
+				DAA7190D2A06C5F100265D8C /* View */,
+			);
+			path = ForgetPassword;
+			sourceTree = "<group>";
+		};
+		DAA7190D2A06C5F100265D8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DAA719112A06C61E00265D8C /* NSForgetPasswordViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAA7190E2A06C5F700265D8C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DAA719162A06C6B900265D8C /* NSForgetPasswordViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DAA7190F2A06C5FE00265D8C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DAA719102A06C60700265D8C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DAA719142A06C65E00265D8C /* NSForgetPasswordCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DAA719132A06C64200265D8C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DAA7190A2A05F40900265D8C /* NSTextField.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,16 +404,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA719172A06C6B900265D8C /* NSForgetPasswordViewModel.swift in Sources */,
 				DAA719032A05D72C00265D8C /* NSLoginViewModel.swift in Sources */,
 				DAA719092A05D7F300265D8C /* UIView+AutoLayout.swift in Sources */,
 				DAA718FB2A0334D000265D8C /* NSLoginViewController.swift in Sources */,
 				DAA719072A05D7C400265D8C /* ViewLayoutHelper.swift in Sources */,
+				DAA719122A06C61F00265D8C /* NSForgetPasswordViewController.swift in Sources */,
 				DAA718FE2A03351300265D8C /* NSLoginCoordinator.swift in Sources */,
 				DA3794B42A032D870024CDA3 /* AppDelegate.swift in Sources */,
 				DAA718F72A03347700265D8C /* Coordinator.swift in Sources */,
 				DAA718F52A0333E700265D8C /* AppCoordinator.swift in Sources */,
+				DAA719152A06C65E00265D8C /* NSForgetPasswordCoordinator.swift in Sources */,
 				DA3794BE2A032D870024CDA3 /* ControleNotasFiscais.xcdatamodeld in Sources */,
-				DAA7190B2A05F40900265D8C /* TextField+Extension.swift in Sources */,
+				DAA7190B2A05F40900265D8C /* NSTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
