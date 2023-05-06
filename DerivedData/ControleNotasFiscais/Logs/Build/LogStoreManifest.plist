@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>048FCA85-5B51-4E68-B7EC-2E7F570A9FC8</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>048FCA85-5B51-4E68-B7EC-2E7F570A9FC8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>ControleNotasFiscais project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ControleNotasFiscais</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Clean ControleNotasFiscais</string>
+			<key>timeStartedRecording</key>
+			<real>704854016.58569598</real>
+			<key>timeStoppedRecording</key>
+			<real>704854016.71658695</real>
+			<key>title</key>
+			<string>Clean ControleNotasFiscais</string>
+			<key>uniqueIdentifier</key>
+			<string>048FCA85-5B51-4E68-B7EC-2E7F570A9FC8</string>
+		</dict>
+		<key>363F9E04-914F-42FA-A517-00473593F3E9</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>363F9E04-914F-42FA-A517-00473593F3E9.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>ControleNotasFiscais project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ControleNotasFiscais</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ControleNotasFiscais</string>
+			<key>timeStartedRecording</key>
+			<real>704854193.45128</real>
+			<key>timeStoppedRecording</key>
+			<real>704854193.78481495</real>
+			<key>title</key>
+			<string>Build ControleNotasFiscais</string>
+			<key>uniqueIdentifier</key>
+			<string>363F9E04-914F-42FA-A517-00473593F3E9</string>
+		</dict>
+		<key>75AA0542-B28E-4BDF-AF19-BB97662D72F0</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>75AA0542-B28E-4BDF-AF19-BB97662D72F0.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>ControleNotasFiscais project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ControleNotasFiscais</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ControleNotasFiscais</string>
+			<key>timeStartedRecording</key>
+			<real>704853546.74293995</real>
+			<key>timeStoppedRecording</key>
+			<real>704853546.94639504</real>
+			<key>title</key>
+			<string>Build ControleNotasFiscais</string>
+			<key>uniqueIdentifier</key>
+			<string>75AA0542-B28E-4BDF-AF19-BB97662D72F0</string>
+		</dict>
+		<key>7F15D50D-D2E7-49D3-86F5-41FB9015855B</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7F15D50D-D2E7-49D3-86F5-41FB9015855B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>ControleNotasFiscais project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ControleNotasFiscais</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ControleNotasFiscais</string>
+			<key>timeStartedRecording</key>
+			<real>704853468.45409799</real>
+			<key>timeStoppedRecording</key>
+			<real>704853468.87079298</real>
+			<key>title</key>
+			<string>Build ControleNotasFiscais</string>
+			<key>uniqueIdentifier</key>
+			<string>7F15D50D-D2E7-49D3-86F5-41FB9015855B</string>
+		</dict>
+		<key>9EA86A27-E078-4192-A21D-769074D2CEC8</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9EA86A27-E078-4192-A21D-769074D2CEC8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>ControleNotasFiscais project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ControleNotasFiscais</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ControleNotasFiscais</string>
+			<key>timeStartedRecording</key>
+			<real>704854008.14256299</real>
+			<key>timeStoppedRecording</key>
+			<real>704854008.76350999</real>
+			<key>title</key>
+			<string>Build ControleNotasFiscais</string>
+			<key>uniqueIdentifier</key>
+			<string>9EA86A27-E078-4192-A21D-769074D2CEC8</string>
+		</dict>
+		<key>B00D6A27-1A14-4B24-88D5-06EF0CE7C6EE</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B00D6A27-1A14-4B24-88D5-06EF0CE7C6EE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>ControleNotasFiscais project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ControleNotasFiscais</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ControleNotasFiscais</string>
+			<key>timeStartedRecording</key>
+			<real>704853703.59788597</real>
+			<key>timeStoppedRecording</key>
+			<real>704853703.91544402</real>
+			<key>title</key>
+			<string>Build ControleNotasFiscais</string>
+			<key>uniqueIdentifier</key>
+			<string>B00D6A27-1A14-4B24-88D5-06EF0CE7C6EE</string>
+		</dict>
+		<key>CDE002C1-CABE-476A-92FA-89E4A3859F94</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>CDE002C1-CABE-476A-92FA-89E4A3859F94.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>ControleNotasFiscais project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ControleNotasFiscais</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ControleNotasFiscais</string>
+			<key>timeStartedRecording</key>
+			<real>704854028.867414</real>
+			<key>timeStoppedRecording</key>
+			<real>704854029.41754997</real>
+			<key>title</key>
+			<string>Build ControleNotasFiscais</string>
+			<key>uniqueIdentifier</key>
+			<string>CDE002C1-CABE-476A-92FA-89E4A3859F94</string>
+		</dict>
+		<key>DCD60CEB-395C-4F5E-9D1A-CD15A5B01C62</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>DCD60CEB-395C-4F5E-9D1A-CD15A5B01C62.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>ControleNotasFiscais project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ControleNotasFiscais</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build ControleNotasFiscais</string>
+			<key>timeStartedRecording</key>
+			<real>704854072.26738799</real>
+			<key>timeStoppedRecording</key>
+			<real>704854072.50866103</real>
+			<key>title</key>
+			<string>Build ControleNotasFiscais</string>
+			<key>uniqueIdentifier</key>
+			<string>DCD60CEB-395C-4F5E-9D1A-CD15A5B01C62</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

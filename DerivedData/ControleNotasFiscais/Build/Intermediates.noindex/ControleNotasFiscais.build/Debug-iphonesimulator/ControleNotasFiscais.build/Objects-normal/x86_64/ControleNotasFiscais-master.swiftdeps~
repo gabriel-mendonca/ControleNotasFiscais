@@ -1,0 +1,11 @@
+version: "Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)"
+options: "6e8ab3410c8df594e74a53f76775c3b2"
+build_time: [1683161272, 376501000]
+inputs:
+  "/Users/gabrielmendonca/Downloads/ControleNotasFiscais/ControleNotasFiscais/Sections/Login/NSLoginViewController.swift": !dirty [1683161104, 568146517]
+  "/Users/gabrielmendonca/Downloads/ControleNotasFiscais/ControleNotasFiscais/Sections/Login/Coordinator/NSLoginCoordinator.swift": !dirty [1683161106, 910012653]
+  "/Users/gabrielmendonca/Downloads/ControleNotasFiscais/ControleNotasFiscais/ViewController.swift": !dirty [1683158535, 61901533]
+  "/Users/gabrielmendonca/Downloads/ControleNotasFiscais/ControleNotasFiscais/AppDelegate.swift": !dirty [1683160311, 855036301]
+  "/Users/gabrielmendonca/Downloads/ControleNotasFiscais/ControleNotasFiscais/AppCoordinator/Coordinator.swift": !dirty [1683160903, 589076487]
+  "/Users/gabrielmendonca/Downloads/ControleNotasFiscais/ControleNotasFiscais/AppCoordinator/AppCoordinator.swift": !dirty [1683160668, 442050864]
+  "/Users/gabrielmendonca/Downloads/ControleNotasFiscais/ControleNotasFiscais/SceneDelegate.swift": !dirty [1683158535, 57494209]

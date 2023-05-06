@@ -1,0 +1,701 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA3794B42A032D870024CDA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3794B32A032D870024CDA3 /* AppDelegate.swift */; };
+		DA3794BE2A032D870024CDA3 /* ControleNotasFiscais.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA3794BC2A032D870024CDA3 /* ControleNotasFiscais.xcdatamodeld */; };
+		DA3794C02A032D8C0024CDA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3794BF2A032D8C0024CDA3 /* Assets.xcassets */; };
+		DA3794C32A032D8C0024CDA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3794C12A032D8C0024CDA3 /* LaunchScreen.storyboard */; };
+		DA3794CE2A032D8D0024CDA3 /* ControleNotasFiscaisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3794CD2A032D8D0024CDA3 /* ControleNotasFiscaisTests.swift */; };
+		DA3794D92A032D8D0024CDA3 /* ControleNotasFiscaisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3794D82A032D8D0024CDA3 /* ControleNotasFiscaisUITests.swift */; };
+		DAA718F52A0333E700265D8C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA718F42A0333E700265D8C /* AppCoordinator.swift */; };
+		DAA718F72A03347700265D8C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA718F62A03347700265D8C /* Coordinator.swift */; };
+		DAA718FB2A0334D000265D8C /* NSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA718FA2A0334D000265D8C /* NSLoginViewController.swift */; };
+		DAA718FE2A03351300265D8C /* NSLoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA718FD2A03351300265D8C /* NSLoginCoordinator.swift */; };
+		DAA719032A05D72C00265D8C /* NSLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA719022A05D72C00265D8C /* NSLoginViewModel.swift */; };
+		DAA719072A05D7C400265D8C /* ViewLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA719062A05D7C400265D8C /* ViewLayoutHelper.swift */; };
+		DAA719092A05D7F300265D8C /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA719082A05D7F300265D8C /* UIView+AutoLayout.swift */; };
+		DAA7190B2A05F40900265D8C /* TextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7190A2A05F40900265D8C /* TextField+Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA3794CA2A032D8D0024CDA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA3794A82A032D860024CDA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA3794AF2A032D860024CDA3;
+			remoteInfo = ControleNotasFiscais;
+		};
+		DA3794D52A032D8D0024CDA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA3794A82A032D860024CDA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA3794AF2A032D860024CDA3;
+			remoteInfo = ControleNotasFiscais;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DA3794B02A032D870024CDA3 /* ControleNotasFiscais.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControleNotasFiscais.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA3794B32A032D870024CDA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DA3794BD2A032D870024CDA3 /* ControleNotasFiscais.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ControleNotasFiscais.xcdatamodel; sourceTree = "<group>"; };
+		DA3794BF2A032D8C0024CDA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA3794C22A032D8C0024CDA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DA3794C42A032D8C0024CDA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA3794C92A032D8D0024CDA3 /* ControleNotasFiscaisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControleNotasFiscaisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA3794CD2A032D8D0024CDA3 /* ControleNotasFiscaisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControleNotasFiscaisTests.swift; sourceTree = "<group>"; };
+		DA3794CF2A032D8D0024CDA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA3794D42A032D8D0024CDA3 /* ControleNotasFiscaisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControleNotasFiscaisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA3794D82A032D8D0024CDA3 /* ControleNotasFiscaisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControleNotasFiscaisUITests.swift; sourceTree = "<group>"; };
+		DA3794DA2A032D8D0024CDA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAA718F42A0333E700265D8C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		DAA718F62A03347700265D8C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DAA718FA2A0334D000265D8C /* NSLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLoginViewController.swift; sourceTree = "<group>"; };
+		DAA718FD2A03351300265D8C /* NSLoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLoginCoordinator.swift; sourceTree = "<group>"; };
+		DAA719022A05D72C00265D8C /* NSLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLoginViewModel.swift; sourceTree = "<group>"; };
+		DAA719062A05D7C400265D8C /* ViewLayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLayoutHelper.swift; sourceTree = "<group>"; };
+		DAA719082A05D7F300265D8C /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		DAA7190A2A05F40900265D8C /* TextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA3794AD2A032D860024CDA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA3794C62A032D8D0024CDA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA3794D12A032D8D0024CDA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA3794A72A032D860024CDA3 = {
+			isa = PBXGroup;
+			children = (
+				DA3794B22A032D870024CDA3 /* ControleNotasFiscais */,
+				DA3794CC2A032D8D0024CDA3 /* ControleNotasFiscaisTests */,
+				DA3794D72A032D8D0024CDA3 /* ControleNotasFiscaisUITests */,
+				DA3794B12A032D870024CDA3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA3794B12A032D870024CDA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA3794B02A032D870024CDA3 /* ControleNotasFiscais.app */,
+				DA3794C92A032D8D0024CDA3 /* ControleNotasFiscaisTests.xctest */,
+				DA3794D42A032D8D0024CDA3 /* ControleNotasFiscaisUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA3794B22A032D870024CDA3 /* ControleNotasFiscais */ = {
+			isa = PBXGroup;
+			children = (
+				DA3794B32A032D870024CDA3 /* AppDelegate.swift */,
+				DAA719042A05D79000265D8C /* Commons */,
+				DAA718F82A0334A700265D8C /* Sections */,
+				DA3794BF2A032D8C0024CDA3 /* Assets.xcassets */,
+				DAA718F32A0333D400265D8C /* AppCoordinator */,
+				DA3794C12A032D8C0024CDA3 /* LaunchScreen.storyboard */,
+				DA3794C42A032D8C0024CDA3 /* Info.plist */,
+				DA3794BC2A032D870024CDA3 /* ControleNotasFiscais.xcdatamodeld */,
+			);
+			path = ControleNotasFiscais;
+			sourceTree = "<group>";
+		};
+		DA3794CC2A032D8D0024CDA3 /* ControleNotasFiscaisTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA3794CD2A032D8D0024CDA3 /* ControleNotasFiscaisTests.swift */,
+				DA3794CF2A032D8D0024CDA3 /* Info.plist */,
+			);
+			path = ControleNotasFiscaisTests;
+			sourceTree = "<group>";
+		};
+		DA3794D72A032D8D0024CDA3 /* ControleNotasFiscaisUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DA3794D82A032D8D0024CDA3 /* ControleNotasFiscaisUITests.swift */,
+				DA3794DA2A032D8D0024CDA3 /* Info.plist */,
+			);
+			path = ControleNotasFiscaisUITests;
+			sourceTree = "<group>";
+		};
+		DAA718F32A0333D400265D8C /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DAA718F42A0333E700265D8C /* AppCoordinator.swift */,
+				DAA718F62A03347700265D8C /* Coordinator.swift */,
+			);
+			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
+		DAA718F82A0334A700265D8C /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				DAA718F92A0334B000265D8C /* Login */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		DAA718F92A0334B000265D8C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DAA718FC2A0334F600265D8C /* Coordinator */,
+				DAA719012A05D71200265D8C /* Model */,
+				DAA719002A05D70B00265D8C /* ViewModel */,
+				DAA718FF2A05D70300265D8C /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		DAA718FC2A0334F600265D8C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DAA718FD2A03351300265D8C /* NSLoginCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DAA718FF2A05D70300265D8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DAA718FA2A0334D000265D8C /* NSLoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAA719002A05D70B00265D8C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DAA719022A05D72C00265D8C /* NSLoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DAA719012A05D71200265D8C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DAA719042A05D79000265D8C /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				DAA719052A05D79C00265D8C /* ViewLayout */,
+				DAA7190A2A05F40900265D8C /* TextField+Extension.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		DAA719052A05D79C00265D8C /* ViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				DAA719062A05D7C400265D8C /* ViewLayoutHelper.swift */,
+				DAA719082A05D7F300265D8C /* UIView+AutoLayout.swift */,
+			);
+			path = ViewLayout;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA3794AF2A032D860024CDA3 /* ControleNotasFiscais */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA3794DD2A032D8D0024CDA3 /* Build configuration list for PBXNativeTarget "ControleNotasFiscais" */;
+			buildPhases = (
+				DA3794AC2A032D860024CDA3 /* Sources */,
+				DA3794AD2A032D860024CDA3 /* Frameworks */,
+				DA3794AE2A032D860024CDA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ControleNotasFiscais;
+			productName = ControleNotasFiscais;
+			productReference = DA3794B02A032D870024CDA3 /* ControleNotasFiscais.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DA3794C82A032D8D0024CDA3 /* ControleNotasFiscaisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA3794E02A032D8D0024CDA3 /* Build configuration list for PBXNativeTarget "ControleNotasFiscaisTests" */;
+			buildPhases = (
+				DA3794C52A032D8D0024CDA3 /* Sources */,
+				DA3794C62A032D8D0024CDA3 /* Frameworks */,
+				DA3794C72A032D8D0024CDA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA3794CB2A032D8D0024CDA3 /* PBXTargetDependency */,
+			);
+			name = ControleNotasFiscaisTests;
+			productName = ControleNotasFiscaisTests;
+			productReference = DA3794C92A032D8D0024CDA3 /* ControleNotasFiscaisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DA3794D32A032D8D0024CDA3 /* ControleNotasFiscaisUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA3794E32A032D8D0024CDA3 /* Build configuration list for PBXNativeTarget "ControleNotasFiscaisUITests" */;
+			buildPhases = (
+				DA3794D02A032D8D0024CDA3 /* Sources */,
+				DA3794D12A032D8D0024CDA3 /* Frameworks */,
+				DA3794D22A032D8D0024CDA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA3794D62A032D8D0024CDA3 /* PBXTargetDependency */,
+			);
+			name = ControleNotasFiscaisUITests;
+			productName = ControleNotasFiscaisUITests;
+			productReference = DA3794D42A032D8D0024CDA3 /* ControleNotasFiscaisUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA3794A82A032D860024CDA3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					DA3794AF2A032D860024CDA3 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					DA3794C82A032D8D0024CDA3 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = DA3794AF2A032D860024CDA3;
+					};
+					DA3794D32A032D8D0024CDA3 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = DA3794AF2A032D860024CDA3;
+					};
+				};
+			};
+			buildConfigurationList = DA3794AB2A032D860024CDA3 /* Build configuration list for PBXProject "ControleNotasFiscais" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA3794A72A032D860024CDA3;
+			productRefGroup = DA3794B12A032D870024CDA3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA3794AF2A032D860024CDA3 /* ControleNotasFiscais */,
+				DA3794C82A032D8D0024CDA3 /* ControleNotasFiscaisTests */,
+				DA3794D32A032D8D0024CDA3 /* ControleNotasFiscaisUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA3794AE2A032D860024CDA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA3794C32A032D8C0024CDA3 /* LaunchScreen.storyboard in Resources */,
+				DA3794C02A032D8C0024CDA3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA3794C72A032D8D0024CDA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA3794D22A032D8D0024CDA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA3794AC2A032D860024CDA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA719032A05D72C00265D8C /* NSLoginViewModel.swift in Sources */,
+				DAA719092A05D7F300265D8C /* UIView+AutoLayout.swift in Sources */,
+				DAA718FB2A0334D000265D8C /* NSLoginViewController.swift in Sources */,
+				DAA719072A05D7C400265D8C /* ViewLayoutHelper.swift in Sources */,
+				DAA718FE2A03351300265D8C /* NSLoginCoordinator.swift in Sources */,
+				DA3794B42A032D870024CDA3 /* AppDelegate.swift in Sources */,
+				DAA718F72A03347700265D8C /* Coordinator.swift in Sources */,
+				DAA718F52A0333E700265D8C /* AppCoordinator.swift in Sources */,
+				DA3794BE2A032D870024CDA3 /* ControleNotasFiscais.xcdatamodeld in Sources */,
+				DAA7190B2A05F40900265D8C /* TextField+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA3794C52A032D8D0024CDA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA3794CE2A032D8D0024CDA3 /* ControleNotasFiscaisTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA3794D02A032D8D0024CDA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA3794D92A032D8D0024CDA3 /* ControleNotasFiscaisUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA3794CB2A032D8D0024CDA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA3794AF2A032D860024CDA3 /* ControleNotasFiscais */;
+			targetProxy = DA3794CA2A032D8D0024CDA3 /* PBXContainerItemProxy */;
+		};
+		DA3794D62A032D8D0024CDA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA3794AF2A032D860024CDA3 /* ControleNotasFiscais */;
+			targetProxy = DA3794D52A032D8D0024CDA3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA3794C12A032D8C0024CDA3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA3794C22A032D8C0024CDA3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA3794DB2A032D8D0024CDA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DA3794DC2A032D8D0024CDA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA3794DE2A032D8D0024CDA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 944UGLCUDB;
+				INFOPLIST_FILE = ControleNotasFiscais/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gabriel-mendonca.ControleNotasFiscais";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA3794DF2A032D8D0024CDA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 944UGLCUDB;
+				INFOPLIST_FILE = ControleNotasFiscais/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gabriel-mendonca.ControleNotasFiscais";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DA3794E12A032D8D0024CDA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 944UGLCUDB;
+				INFOPLIST_FILE = ControleNotasFiscaisTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gabriel-mendonca.ControleNotasFiscaisTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ControleNotasFiscais.app/ControleNotasFiscais";
+			};
+			name = Debug;
+		};
+		DA3794E22A032D8D0024CDA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 944UGLCUDB;
+				INFOPLIST_FILE = ControleNotasFiscaisTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gabriel-mendonca.ControleNotasFiscaisTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ControleNotasFiscais.app/ControleNotasFiscais";
+			};
+			name = Release;
+		};
+		DA3794E42A032D8D0024CDA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 944UGLCUDB;
+				INFOPLIST_FILE = ControleNotasFiscaisUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gabriel-mendonca.ControleNotasFiscaisUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ControleNotasFiscais;
+			};
+			name = Debug;
+		};
+		DA3794E52A032D8D0024CDA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 944UGLCUDB;
+				INFOPLIST_FILE = ControleNotasFiscaisUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gabriel-mendonca.ControleNotasFiscaisUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ControleNotasFiscais;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA3794AB2A032D860024CDA3 /* Build configuration list for PBXProject "ControleNotasFiscais" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA3794DB2A032D8D0024CDA3 /* Debug */,
+				DA3794DC2A032D8D0024CDA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA3794DD2A032D8D0024CDA3 /* Build configuration list for PBXNativeTarget "ControleNotasFiscais" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA3794DE2A032D8D0024CDA3 /* Debug */,
+				DA3794DF2A032D8D0024CDA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA3794E02A032D8D0024CDA3 /* Build configuration list for PBXNativeTarget "ControleNotasFiscaisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA3794E12A032D8D0024CDA3 /* Debug */,
+				DA3794E22A032D8D0024CDA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA3794E32A032D8D0024CDA3 /* Build configuration list for PBXNativeTarget "ControleNotasFiscaisUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA3794E42A032D8D0024CDA3 /* Debug */,
+				DA3794E52A032D8D0024CDA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DA3794BC2A032D870024CDA3 /* ControleNotasFiscais.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DA3794BD2A032D870024CDA3 /* ControleNotasFiscais.xcdatamodel */,
+			);
+			currentVersion = DA3794BD2A032D870024CDA3 /* ControleNotasFiscais.xcdatamodel */;
+			path = ControleNotasFiscais.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DA3794A82A032D860024CDA3 /* Project object */;
+}
