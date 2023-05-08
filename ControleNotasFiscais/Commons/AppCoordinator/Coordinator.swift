@@ -8,7 +8,7 @@
 import UIKit
 
 enum PresentationType {
-    case push(navigationController: UINavigationController)
+    case push(navigationController: NSNavigationViewController)
     case modal(viewController: UIViewController)
     
     func associatedValue() -> Any? {
@@ -25,7 +25,7 @@ enum PresentationType {
 protocol Coordinator: AnyObject {
     associatedtype V: UIViewController
     var view: V? { get set }
-    var navigation: UINavigationController? { get set }
+    var navigation: NSNavigationViewController? { get set }
     var presentationType: PresentationType? { get set }
     
     func start() -> V
@@ -49,7 +49,7 @@ extension Coordinator {
             self.navigation = navigation
             navigation.pushViewController(start(), animated: animated)
         case .modal(let controller):
-            self.navigation = UINavigationController(rootViewController: start())
+            self.navigation = NSNavigationViewController(rootViewController: start())
             guard let nav = self.navigation else { return }
             controller.present(nav, animated: animated, completion: nil)
         }

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import GoogleSignIn
+import Firebase
 
 class NSLoginViewController: UIViewController {
     
@@ -64,6 +66,17 @@ class NSLoginViewController: UIViewController {
         password.clipsToBounds = true
         password.layer.cornerRadius = 5
         password.placeholder = "Password"
+        password.isSecureTextEntry = true
+        password.rightImage = UIImage(systemName: "eye.slash.fill")!
+        password.actionButtonImage = {
+            if password.isSelectedButton {
+                password.rightImage = UIImage(systemName: "eye.slash.fill")!
+                password.isSecureTextEntry = password.isSelectedButton
+            } else {
+                password.rightImage = UIImage(systemName: "eye.fill")!
+                password.isSecureTextEntry = password.isSelectedButton
+            }
+        }
         password.textPadding = 10
         return password
     }()
@@ -85,6 +98,7 @@ class NSLoginViewController: UIViewController {
         button.backgroundColor = .white
         button.clipsToBounds = true
         button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(validateSignIn), for: .touchUpInside)
         return button
     }()
     
@@ -99,14 +113,14 @@ class NSLoginViewController: UIViewController {
         return button
     }()
     
-    lazy var buttonGoogle: UIButton = {
-        let button = UIButton(type: .system)
+    lazy var buttonGoogle: GIDSignInButton = {
+        let button = GIDSignInButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Login com google", for: .normal)
         button.tintColor = .black
         button.backgroundColor = .white
         button.clipsToBounds = true
         button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(signGoogle), for: .touchUpInside)
         return button
     }()
     
@@ -121,9 +135,98 @@ class NSLoginViewController: UIViewController {
         return button
     }()
     
+    private func validate() {
+        
+        guard textFieldEmail.text != "" else {
+            showMessage("Atenção", "Preencha o campo EMAIL!")
+            return
+        }
+        guard (textFieldEmail.text ?? "").isEmailValido() else {
+            showMessage("Atencao", "Digite um email valido!")
+            return
+        }
+        
+        guard textFieldPassword.text != "" else {
+            showMessage("Atenção", "Preencha o campo PASSWORD!")
+            return
+        }
+    }
+    
+    @objc
+    private func signGoogle() {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+
+        
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { result, error in
+            guard error == nil else { return }
+            
+            guard let user = result?.user,
+                  let idToken = user.idToken?.tokenString
+            else {
+                return
+            }
+            
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken,
+                                                           accessToken: user.accessToken.tokenString)
+            Auth.auth().signIn(with: credential) { authResult, error in
+                if error != nil {
+                    return
+                }
+                
+                if let profileData = authResult {
+                    let email: String = profileData.user.email ?? ""
+                    let name: String = profileData.user.displayName ?? ""
+                    
+                    self.viewModel.registerNewUser(name, email, "") { data in
+                        if let result:String = data["result"] as? String,
+                           let messageError:String = data["message_error"] as? String {
+                            if result == "error" {
+                                self.showMessage("Erro", messageError)
+                            } else if result == "success" {
+                                //gohome
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                                    self.showMessageOnTimer("Sucesso", "Usuario Cadastrado.")
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    
     @objc
     private func sendToForgetPassword() {
         viewModel.goForgetPassword()
+    }
+    
+    @objc
+    private func validateSignIn() {
+        let email = textFieldEmail.text ?? ""
+        let password = textFieldPassword.text ?? ""
+        
+        viewModel.getUSerFromApi(email, password) {[weak self] result in
+            switch result {
+                
+            case .success(_):
+                self?.validate()
+                    
+                
+            case .failure(let error):
+                if error.localizedDescription.contains("Access to this account has") == true {
+                    self?.showMessage("Atençao !", "O acesso a conta foi temporariamente bloqueado devido a diversas tentativas com senha incorreta. Para acesso imediato reset sua senha, ou tente novamente mais tarde.")
+                } else if error.localizedDescription == "The password is invalid or the user does not have a password." {
+                    self?.showMessage("Atençao !", "Senha invalida, verifique!")
+                } else {
+                    self?.validate()
+                }
+            }
+        }
+
     }
     
     private func constraintsTitlePage() {

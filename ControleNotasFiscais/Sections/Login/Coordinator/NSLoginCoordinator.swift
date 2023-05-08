@@ -9,7 +9,7 @@ import UIKit
 
 class NSLoginCoordinator: Coordinator {
     var view: NSLoginViewController?
-    var navigation: UINavigationController?
+    var navigation: NSNavigationViewController?
     var presentationType: PresentationType?
     
     var nsForgetPasswordCoordinator: NSForgetPasswordCoordinator!

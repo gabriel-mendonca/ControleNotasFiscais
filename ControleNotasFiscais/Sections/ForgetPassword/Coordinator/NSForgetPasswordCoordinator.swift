@@ -10,7 +10,7 @@ import UIKit
 class NSForgetPasswordCoordinator: Coordinator {
     
     var view: NSForgetPasswordViewController?
-    var navigation: UINavigationController?
+    var navigation: NSNavigationViewController?
     var presentationType: PresentationType?
     
     init() {
