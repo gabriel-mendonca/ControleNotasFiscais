@@ -13,7 +13,6 @@ extension UIViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: .default))
         
         self.present(alert, animated: true, completion: nil)
-        
     }
     
     func showMessageOnTimer(_ title:String,_ message :String) {
@@ -22,7 +21,12 @@ extension UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                 alert.dismiss(animated: true, completion: nil)
         }
-        
+    }
+    
+    func hideKeyBoardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
     
     func hideNavigationBar(_ animated: Bool) {
@@ -33,4 +37,8 @@ extension UIViewController {
    func showNavigationBar(_ animated: Bool) {
        self.navigationController?.setNavigationBarHidden(false, animated: animated)
    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

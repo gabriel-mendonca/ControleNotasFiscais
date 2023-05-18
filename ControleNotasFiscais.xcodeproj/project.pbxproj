@@ -10,6 +10,10 @@
 		A835EAC92A081898009333F4 /* NSNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A835EAC82A081898009333F4 /* NSNavigationViewController.swift */; };
 		A835EACC2A0833B6009333F4 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A835EACB2A0833B6009333F4 /* GoogleSignIn */; };
 		A835EACE2A0833B6009333F4 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A835EACD2A0833B6009333F4 /* GoogleSignInSwift */; };
+		A835EAD22A09E5BC009333F4 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = A835EAD12A09E5BC009333F4 /* FacebookCore */; };
+		A835EAD42A09E5BC009333F4 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = A835EAD32A09E5BC009333F4 /* FacebookLogin */; };
+		A835EAD62A09E5BC009333F4 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = A835EAD52A09E5BC009333F4 /* FacebookShare */; };
+		A835EAD82A09E77E009333F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A835EAD72A09E77E009333F4 /* SceneDelegate.swift */; };
 		A8FD341F2A06DF5E0072ECE7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A8FD341E2A06DF5E0072ECE7 /* GoogleService-Info.plist */; };
 		A8FD34222A06E0C30072ECE7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A8FD34212A06E0C30072ECE7 /* FirebaseAnalytics */; };
 		A8FD34242A06E0C30072ECE7 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = A8FD34232A06E0C30072ECE7 /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -61,6 +65,8 @@
 
 /* Begin PBXFileReference section */
 		A835EAC82A081898009333F4 /* NSNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNavigationViewController.swift; sourceTree = "<group>"; };
+		A835EACF2A09E412009333F4 /* ControleNotasFiscais.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ControleNotasFiscais.entitlements; sourceTree = "<group>"; };
+		A835EAD72A09E77E009333F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A8FD341E2A06DF5E0072ECE7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A8FD342C2A06E2650072ECE7 /* LoginUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserModel.swift; sourceTree = "<group>"; };
 		A8FD34322A06E3C90072ECE7 /* UserBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserBusiness.swift; sourceTree = "<group>"; };
@@ -104,8 +110,11 @@
 				A835EACE2A0833B6009333F4 /* GoogleSignInSwift in Frameworks */,
 				A8FD34262A06E0C30072ECE7 /* FirebaseAuth in Frameworks */,
 				A8FD342A2A06E0C30072ECE7 /* FirebaseStorage in Frameworks */,
+				A835EAD42A09E5BC009333F4 /* FacebookLogin in Frameworks */,
 				A8FD34242A06E0C30072ECE7 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				A835EACC2A0833B6009333F4 /* GoogleSignIn in Frameworks */,
+				A835EAD62A09E5BC009333F4 /* FacebookShare in Frameworks */,
+				A835EAD22A09E5BC009333F4 /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +218,9 @@
 		DA3794B22A032D870024CDA3 /* ControleNotasFiscais */ = {
 			isa = PBXGroup;
 			children = (
+				A835EACF2A09E412009333F4 /* ControleNotasFiscais.entitlements */,
 				DA3794B32A032D870024CDA3 /* AppDelegate.swift */,
+				A835EAD72A09E77E009333F4 /* SceneDelegate.swift */,
 				DAA719042A05D79000265D8C /* Commons */,
 				DAA718F82A0334A700265D8C /* Sections */,
 				DA3794BF2A032D8C0024CDA3 /* Assets.xcassets */,
@@ -388,6 +399,9 @@
 				A8FD34292A06E0C30072ECE7 /* FirebaseStorage */,
 				A835EACB2A0833B6009333F4 /* GoogleSignIn */,
 				A835EACD2A0833B6009333F4 /* GoogleSignInSwift */,
+				A835EAD12A09E5BC009333F4 /* FacebookCore */,
+				A835EAD32A09E5BC009333F4 /* FacebookLogin */,
+				A835EAD52A09E5BC009333F4 /* FacebookShare */,
 			);
 			productName = ControleNotasFiscais;
 			productReference = DA3794B02A032D870024CDA3 /* ControleNotasFiscais.app */;
@@ -463,6 +477,7 @@
 			packageReferences = (
 				A8FD34202A06E0C30072ECE7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				A835EACA2A0833B6009333F4 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				A835EAD02A09E5BC009333F4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = DA3794B12A032D870024CDA3 /* Products */;
 			projectDirPath = "";
@@ -514,6 +529,7 @@
 				A8FD34392A06E3C90072ECE7 /* UserBusiness.swift in Sources */,
 				DAA719092A05D7F300265D8C /* UIView+AutoLayout.swift in Sources */,
 				DAA718FB2A0334D000265D8C /* NSLoginViewController.swift in Sources */,
+				A835EAD82A09E77E009333F4 /* SceneDelegate.swift in Sources */,
 				A8FD34422A06E7A20072ECE7 /* UIViewController+Extensions.swift in Sources */,
 				DAA719072A05D7C400265D8C /* ViewLayoutHelper.swift in Sources */,
 				DAA719122A06C61F00265D8C /* NSForgetPasswordViewController.swift in Sources */,
@@ -695,10 +711,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ControleNotasFiscais/ControleNotasFiscais.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 944UGLCUDB;
 				INFOPLIST_FILE = ControleNotasFiscais/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -715,10 +732,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ControleNotasFiscais/ControleNotasFiscais.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 944UGLCUDB;
 				INFOPLIST_FILE = ControleNotasFiscais/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -864,6 +882,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		A835EAD02A09E5BC009333F4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		A8FD34202A06E0C30072ECE7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -884,6 +910,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A835EACA2A0833B6009333F4 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		A835EAD12A09E5BC009333F4 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A835EAD02A09E5BC009333F4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		A835EAD32A09E5BC009333F4 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A835EAD02A09E5BC009333F4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+		A835EAD52A09E5BC009333F4 /* FacebookShare */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A835EAD02A09E5BC009333F4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookShare;
 		};
 		A8FD34212A06E0C30072ECE7 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;

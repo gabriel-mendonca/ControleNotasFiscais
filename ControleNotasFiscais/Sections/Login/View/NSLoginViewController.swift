@@ -8,6 +8,8 @@
 import UIKit
 import GoogleSignIn
 import Firebase
+import FacebookLogin
+import FBSDKLoginKit
 
 class NSLoginViewController: UIViewController {
     
@@ -27,6 +29,16 @@ class NSLoginViewController: UIViewController {
         setupView()
     }
     
+    lazy var scrollView: UIScrollView = {
+        let scroll = UIScrollView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
+        return scroll
+    }()
+    
+    lazy var contentView: UIView = {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 1000))
+        return view
+    }()
+    
     lazy var titlePage: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -42,8 +54,7 @@ class NSLoginViewController: UIViewController {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
-        stack.alignment = .fill
-        stack.distribution = .fillProportionally
+        stack.distribution = .fillEqually
         stack.spacing = 12
         return stack
     }()
@@ -110,12 +121,13 @@ class NSLoginViewController: UIViewController {
         button.backgroundColor = .white
         button.clipsToBounds = true
         button.layer.cornerRadius = 5
+        button.addTarget(self, action:
+                            #selector(logOutFacebook), for: .touchUpInside)
         return button
     }()
     
     lazy var buttonGoogle: GIDSignInButton = {
         let button = GIDSignInButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
         button.tintColor = .black
         button.backgroundColor = .white
         button.clipsToBounds = true
@@ -124,79 +136,23 @@ class NSLoginViewController: UIViewController {
         return button
     }()
     
-    lazy var buttonFacebook: UIButton = {
-        let button = UIButton(type: .system)
+    lazy var buttonFacebook: FBLoginButton = {
+        let button = FBLoginButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Login com Facebook", for: .normal)
-        button.tintColor = .black
-        button.backgroundColor = .white
-        button.clipsToBounds = true
-        button.layer.cornerRadius = 5
+        button.loginTracking = .limited
+        button.nonce = viewModel.sha256(viewModel.currentNonce ?? "")
+        button.addTarget(self, action: #selector(signFacebook), for: .touchUpInside)
         return button
     }()
     
-    private func validate() {
-        
-        guard textFieldEmail.text != "" else {
-            showMessage("Atenção", "Preencha o campo EMAIL!")
-            return
-        }
-        guard (textFieldEmail.text ?? "").isEmailValido() else {
-            showMessage("Atencao", "Digite um email valido!")
-            return
-        }
-        
-        guard textFieldPassword.text != "" else {
-            showMessage("Atenção", "Preencha o campo PASSWORD!")
-            return
-        }
+    @objc
+    private func signGoogle() {
+        self.viewModel.signInGoogle(self)
     }
     
     @objc
-    private func signGoogle() {
-        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
-
-        
-        let config = GIDConfiguration(clientID: clientID)
-        GIDSignIn.sharedInstance.configuration = config
-
-        GIDSignIn.sharedInstance.signIn(withPresenting: self) { result, error in
-            guard error == nil else { return }
-            
-            guard let user = result?.user,
-                  let idToken = user.idToken?.tokenString
-            else {
-                return
-            }
-            
-            let credential = GoogleAuthProvider.credential(withIDToken: idToken,
-                                                           accessToken: user.accessToken.tokenString)
-            Auth.auth().signIn(with: credential) { authResult, error in
-                if error != nil {
-                    return
-                }
-                
-                if let profileData = authResult {
-                    let email: String = profileData.user.email ?? ""
-                    let name: String = profileData.user.displayName ?? ""
-                    
-                    self.viewModel.registerNewUser(name, email, "") { data in
-                        if let result:String = data["result"] as? String,
-                           let messageError:String = data["message_error"] as? String {
-                            if result == "error" {
-                                self.showMessage("Erro", messageError)
-                            } else if result == "success" {
-                                //gohome
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-                                    self.showMessageOnTimer("Sucesso", "Usuario Cadastrado.")
-                                }
-                            }
-                        }
-                    }
-                }
-                
-            }
-        }
+    private func signFacebook() {
+        self.viewModel.signInFacebook(self)
     }
     
     @objc
@@ -209,24 +165,13 @@ class NSLoginViewController: UIViewController {
         let email = textFieldEmail.text ?? ""
         let password = textFieldPassword.text ?? ""
         
-        viewModel.getUSerFromApi(email, password) {[weak self] result in
-            switch result {
-                
-            case .success(_):
-                self?.validate()
-                    
-                
-            case .failure(let error):
-                if error.localizedDescription.contains("Access to this account has") == true {
-                    self?.showMessage("Atençao !", "O acesso a conta foi temporariamente bloqueado devido a diversas tentativas com senha incorreta. Para acesso imediato reset sua senha, ou tente novamente mais tarde.")
-                } else if error.localizedDescription == "The password is invalid or the user does not have a password." {
-                    self?.showMessage("Atençao !", "Senha invalida, verifique!")
-                } else {
-                    self?.validate()
-                }
-            }
-        }
+        self.viewModel.signIn(email: email, password: password, viewController: self)
 
+    }
+    
+    @objc
+    private func logOutFacebook() {
+        self.viewModel.logoutFacebook()
     }
     
     private func constraintsTitlePage() {
@@ -290,12 +235,14 @@ class NSLoginViewController: UIViewController {
 
 extension NSLoginViewController: ViewLayoutHelper {
     func buildViewHierarchy() {
-        view.addSubview(titlePage)
-        view.addSubview(textFieldEmail)
-        view.addSubview(textFieldPassword)
-        view.addSubview(buttonForgetPassword)
-        view.addSubview(buttonEnter)
-        view.addSubview(stackButtonsLogin)
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        contentView.addSubview(titlePage)
+        contentView.addSubview(textFieldEmail)
+        contentView.addSubview(textFieldPassword)
+        contentView.addSubview(buttonForgetPassword)
+        contentView.addSubview(buttonEnter)
+        contentView.addSubview(stackButtonsLogin)
         
         stackButtonsLogin.addArrangedSubview(buttonCadastrar)
         stackButtonsLogin.addArrangedSubview(buttonGoogle)
@@ -313,6 +260,8 @@ extension NSLoginViewController: ViewLayoutHelper {
     
     func setupAdditionalConfiguration() {
         view.backgroundColor = .black
+        scrollView.contentSize = contentView.frame.size
+        hideKeyBoardWhenTappedAround()
     }
     
     
